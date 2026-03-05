@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>SnippetBox</title>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-start justify-center py-10">
+
+    <div class="wrapper flex flex-col lg:flex-row w-full max-w-7xl gap-10 px-6">
+        <!-- Form -->
+        <form id="snippet-form" class="bg-gray-800 w-full max-w-xl shadow-xl rounded-2xl px-6 py-6 flex flex-col gap-5 sticky top-10">
+        <h1 class="text-gray-100 font-bold text-xl sm:text-2xl">Add a Snippet</h1>
+
+        <input type="text" id="title" placeholder="Code Name"
+            class="w-full bg-gray-100 text-gray-800 font-medium px-4 py-2 rounded-lg border border-sky-400 focus:outline-sky-500" required />
+
+        <input type="text" id="language" placeholder="Language"
+            class="w-full bg-gray-100 text-gray-800 font-medium px-4 py-2 rounded-lg border border-sky-400 focus:outline-sky-500" required />
+
+        <textarea id="code" placeholder="Write your code..."
+            class="w-full bg-gray-100 text-pink-600 font-mono px-4 py-2 rounded-lg border border-sky-400 focus:outline-sky-500 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-500" required></textarea>
+
+        <textarea id="description" placeholder="Short description"
+            class="w-full bg-gray-100 text-gray-700 font-medium px-4 py-2 rounded-lg border border-sky-400 focus:outline-sky-500"></textarea>
+
+        <button type="submit"
+            class="w-full px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-3xl transition-all">
+            Add Snippet
+        </button>
+        </form>
+
+        <!-- Snippets Container -->
+        <div id="snippets-container" class="w-full flex flex-col gap-6"></div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+}
+
+#snippet-form {
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+}
+
+pre, p{
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.snippets-container {
+    min-width: 0;
+}
+
+@media (max-width: 1024px) {
+    #snippet-form{
+        position: static;
+    }
+}
